@@ -9,9 +9,9 @@ import java.util.Optional;
  */
 public interface PlotsWebService {
 
-    Optional<URL> getDataStoreURL(String path);
+    Optional<URL> lookupURL(Object path);
 
-    Optional<URL> getDataStoreURL(DataStore dataStore);
+    Optional<URL> registerDataStore(DataStore dataStore);
 
     DataStore newMemoryDataStore(String name, byte[] rawData);
 

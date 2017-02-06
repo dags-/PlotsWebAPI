@@ -17,14 +17,6 @@ public interface DataStore {
 
     void delete() throws IOException;
 
-    default int getHashCode() {
-        return getPath().hashCode();
-    }
-
-    default boolean checkEquals(Object other) {
-        return other != null && other.getClass() == this.getClass() && ((DataStore) other).getPath().equals(getPath());
-    }
-
     public interface Details {
 
         String getName();
